@@ -1,0 +1,169 @@
+:root {
+    font-family: sans-serif;
+    font-size: 16px;
+    --nav-text: white;
+    --nav-textLogo: white;
+    --nav-textHover: white;
+    --nav-bg: rgba(0,0,0,0.1);
+    --nav-bg2: rgba(0,0,0,0.2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: linear-gradient(to right, rgb(255, 81, 81), rgb(255, 255, 125));
+}
+
+header,
+main,
+footer {
+    margin: 20px;
+}
+
+header {
+    display: flex;
+    background: rgba(0, 0, 0, 0.1);
+    height: 300px;
+    border-radius: 20px;
+    align-items: center;
+}
+
+header a {
+    margin-left: auto;
+    margin-right: 25px;
+}
+
+header img {
+    width: 250px;
+    height: 250px;
+}
+
+header h1,
+header h2 {
+    margin-left: 75px;
+    color: white;
+}
+
+header h1 {
+    font-size: 75px;
+}
+
+header h2 {
+    font-size: 25px;
+}
+
+main {
+    text-align: justify;
+}
+
+h3 {
+    color: white;
+    font-size: 25px;
+    margin: 20px;
+}
+
+.content {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    color: white;
+}
+
+.content li {
+    margin: 10px;
+}
+
+.content h4 {
+    font-size: 20px;
+}
+
+.content p {
+    font-size: 16px;
+}
+
+#projects {
+    display: flex;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+}
+
+#projects a {
+    text-decoration: none;
+    flex: 1;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    transition: all 0.25s ease;
+}
+
+
+#PetRocks {
+    background-color: #007cad;
+    color: white;
+}
+
+#PetRocks:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#Breakout {
+    background-color: black;
+    color: white;
+}
+
+#Breakout:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+/* Header Smallification */
+@media only screen and (max-width:900px) {
+    header img {
+        width: 75px;
+        height: 75px;
+    }
+
+    header {
+        height: 150px;
+    }
+
+    header h1,
+    header h2 {
+        margin-left: 30px;
+    }
+
+    header h1 {
+        font-size: 50px;
+    }
+}
+
+/* Header Change for Phones */
+@media only screen and (max-width:475px) {
+    /* Changes projects into vertical list */
+    #projects a {
+        width: 100%;
+        flex: none;
+    }
+
+    header {
+        margin-top: 100px;
+    }
+
+    header img {
+        position: absolute;
+        top: 50px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+}

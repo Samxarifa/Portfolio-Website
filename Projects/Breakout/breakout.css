@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+    --nav-text: #b6b6b6;
+    --nav-textLogo: white;
+    --nav-textHover: white;
+    --nav-bg: #23232e;
+    --nav-bg2: #141418;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+#myCanvas {
+    background-color: white;
+    /*border: 5px;
+    border-style: dashed;
+    border-color: black;*/
+    max-height: 75vh;
+    height: 750px;
+
+}
+
+body {
+    background-color: black;
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
