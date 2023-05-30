@@ -452,6 +452,15 @@ footer ul li:last-child {
     position: relative;
 }
 
+#cart_items .item .item_options a,
+#cart_items .item .item_options button {
+    height: 35px;
+}
+
+#cart_items .item .item_options i {
+    margin-left: 0;
+}
+
 #order_items .item {
     height: 100px;
     max-width: 750px;
@@ -899,7 +908,8 @@ footer ul li:last-child {
 
     }
 
-    #cart_items .item .item_price a,#order_items .item .item_price a {
+    #cart_items .item .item_price a,
+    #order_items .item .item_price a {
         width: 100%;
         height: 50px;
         position: absolute;
@@ -956,7 +966,7 @@ footer ul li:last-child {
     header a {
         margin-right: 20px;
     }
-    
+
     #petrocks-nav li {
         flex: 1;
     }
