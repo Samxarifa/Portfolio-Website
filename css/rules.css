@@ -4,8 +4,8 @@
     --nav-text: white;
     --nav-textLogo: white;
     --nav-textHover: white;
-    --nav-bg: rgba(0,0,0,0.1);
-    --nav-bg2: rgba(0,0,0,0.2);
+    --nav-bg: rgba(0, 0, 0, 0.1);
+    --nav-bg2: rgba(0, 0, 0, 0.2);
 }
 
 * {
@@ -110,19 +110,15 @@ h3 {
     color: white;
 }
 
-#PetRocks:hover {
-    transform: scale(1.03);
+#PetRocks:hover,
+#Breakout:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transform: scale(1.01);
 }
 
 #Breakout {
     background-color: black;
     color: white;
-}
-
-#Breakout:hover {
-    transform: scale(1.03);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 
@@ -149,6 +145,7 @@ h3 {
 
 /* Header Change for Phones */
 @media only screen and (max-width:475px) {
+
     /* Changes projects into vertical list */
     #projects a {
         width: 100%;

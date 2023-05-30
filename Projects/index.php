@@ -16,8 +16,8 @@
     <main>
         <h3>Projects</h3>
         <div id="projects">
-            <a id="PetRocks" href="PetRocks/">Pet Rocks (Originally for PC)</a>
-            <a id="Breakout" href="Breakout/">Breakout (PC Only)</a>
+            <a id="PetRocks" href="PetRocks/">Pet Rocks (<span style="color: yellow;">PC Recommended</span>)</a>
+            <a id="Breakout" href="Breakout/">Breakout (<span style="color: red;">PC Required</span>)</a>
         </div>
     </main>
 </body>
