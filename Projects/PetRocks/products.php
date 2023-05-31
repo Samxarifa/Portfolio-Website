@@ -54,14 +54,12 @@
                     $qtyInStock = $row['qtyInStock'];
                     $image = $row['imageURL'];
                     
-                    $stockText = 'Out of Stock';
-                    $stockColor = 'red';
+                    $stockText = "<p style='color: red;'>Out Of Stock</p>";
                     $cartButton = '';
                     
 
                     if ($qtyInStock > 0) { #If in stock, shows add to cart button
-                        $stockText = 'In Stock';
-                        $stockColor = 'white';
+                        $stockText = "<p>In Stock</p>";
             
                         $cartButton = "<form action='code/addToCart.php' method='post'>
                                             <input hidden type='text' id='id' name='id' value='$id'>
@@ -75,7 +73,7 @@
                             <h1>$name</h1>
                             <div>
                                 <p>£$price</p>
-                                <p style='color: $stockColor;'>$stockText</p>
+                                $stockText
                             </div>
                         </div>
                         <div class='card_buttons'>

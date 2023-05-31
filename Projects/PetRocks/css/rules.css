@@ -6,6 +6,14 @@
     --nav-textHover: white;
     --nav-bg: var(--blue);
     --nav-bg2: var(--darkblue);
+
+    --blue: #007cad;
+    --darkblue: #005272;
+    --shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    --bg: white;
+    --fg: #e5e5e5;
+    --text: black;
 }
 
 * {
@@ -13,9 +21,6 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
-    --blue: #007cad;
-    --darkblue: #005272;
-    --shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transition: all 0.25s ease;
 }
 
@@ -23,6 +28,8 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background: var(--bg);
+    color: var(--text);
 }
 
 /* HEADER ------------------------------------------------------- */
@@ -66,7 +73,7 @@ header a {
     padding: 10px;
     font-size: 20px;
     border-right: 0;
-
+    color: var(--text);
 }
 
 #div_search input:focus {
@@ -81,7 +88,7 @@ header a {
     border-style: solid;
     border-radius: 10px;
     border-width: 2px;
-    background: white;
+    background: var(--bg);
 }
 
 #div_search button {
@@ -606,18 +613,18 @@ footer ul li:last-child {
 }
 
 .total .item_text h1 {
-    color: black;
+    color: var(--text);
 }
 
 .total .item_price {
     border-left: none;
     border-top: solid;
-    border-color: black;
+    border-color: var(--text);
     justify-content: start;
 }
 
 .total .item_price p {
-    color: black;
+    color: var(--text);
     font-size: 30px;
 }
 
@@ -820,12 +827,31 @@ footer ul li:last-child {
 
     #div_dropdown {
         right: 120px;
+        background: var(--fg);
+        color: var(--text);
+    }
+
+    #div_dropdown a {
+        color: var(--text);
     }
 
     #petrocks-nav {
-        margin-top: 50px;
+        margin-top: 40px;
+        background: var(--bg);
     }
 
+    #petrocks-nav ul {
+        margin: 0 10px;
+        gap: 10px;
+    }
+
+    #petrocks-nav ul li a {
+        background: var(--fg);
+    }
+
+    #petrocks-nav ul li a i {
+        color: var(--text);
+    }
 
     .div_backgroundImage {
         min-height: 300px;
@@ -839,7 +865,8 @@ footer ul li:last-child {
     }
 
     .div_backgroundImage div {
-        padding-left: 50px;
+        padding-left: 0;
+        text-align: center;
     }
 
     .div_backgroundImage h1 {
@@ -870,35 +897,53 @@ footer ul li:last-child {
         display: none;
     }
 
+    .card {
+        background: var(--fg);
+        color: var(--text);
+    }
     .card .card_content {
         flex: none;
         margin-bottom: 10px;
     }
 
+    .card a, .card button {
+        background: var(--blue);
+    }
+
     footer {
         height: auto;
+        background: var(--fg);
+        color: var(--text);
     }
 
     footer ul {
         flex-wrap: wrap;
     }
 
+    .item:not(.total) {
+        background: var(--fg) !important;
+        color: var(--text);
+    }
 
     footer ul li:last-child {
         margin-left: 10px;
     }
 
-    .item_text {
+    .item:not(.total) .item_text {
         font-size: 12px;
+        color: var(--text);
     }
 
-    #cart_items .item .item_text {
+    .item:not(.total) .item_price {
+        color: var(--text);
+    }
+
+    #cart_items .item:not(.total) .item_text {
         margin-left: 100px;
     }
 
     #cart_items .item .item_options {
         min-height: 60px;
-
     }
 
     #cart_items .item .item_options button,
@@ -935,6 +980,8 @@ footer ul li:last-child {
 
     #checkout #check_price {
         margin: 10px;
+        background: var(--fg);
+        color: var(--text);
     }
 
     #checkout #check_price button {
@@ -949,6 +996,10 @@ footer ul li:last-child {
     #order_items .item .item_content .item_options form,
     #order_items .item .item_content .item_options form button {
         height: 100%;
+    }
+
+    #order_items .item .item_content .item_options form button {
+        background: var(--blue);
     }
 
     .card:hover,
@@ -982,5 +1033,25 @@ footer ul li:last-child {
 
     #petrocks-nav li a span {
         display: none;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #121212;
+        --fg: #2a2a2a;
+        --text: rgba(255, 255, 255, 0.87);
+    }
+    
+    * {
+        --shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+    }
+
+    .div_backgroundImage div {
+        background: rgba(0, 0, 0, 0.75);
+    }
+
+    .card_image {
+        filter: brightness(0.75);
     }
 }

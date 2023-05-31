@@ -6,6 +6,14 @@
     --nav-textHover: white;
     --nav-bg: var(--blue);
     --nav-bg2: var(--darkblue);
+
+    --blue: #007cad;
+    --darkblue: #005272;
+    --shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    --bg: white;
+    --fg: var(--blue);
+    --buttons: var(--blue);
 }
 
 * {
@@ -13,10 +21,12 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
-    --blue: #007cad;
-    --darkblue: #005272;
-    --shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transition: all 0.25s ease;
+}
+
+
+body {
+    background: var(--bg);
 }
 
 
@@ -45,7 +55,7 @@ h2 {
 #register {
     position: absolute;
     top: 20px;
-    color: var(--blue);
+    color: var(--buttons);
 }
 
 #register {
@@ -62,7 +72,7 @@ h2 {
 }
 
 #accountForm {
-    background: var(--blue);
+    background: var(--fg);
     padding: 50px;
     border-radius: 10px;
     box-shadow: var(--shadow);
@@ -138,5 +148,26 @@ i {
 
     .div_section {
         flex-direction: column;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --shadow: none;
+        --bg: #121212;
+        --fg: #2a2a2a;
+        --buttons: rgba(255, 255, 255, 0.87);
+    }
+
+    #accountForm input,
+    #accountForm select {
+        background: #2a2a2a;
+        border: solid 2px var(--blue);
+        color: white;
+    }
+
+    #accountForm button {
+        background-color: var(--blue);
+        color: white;
     }
 }
